@@ -142,7 +142,7 @@ openbsd_amd64:
 	go generate 2>&1 | tee log-generate
 	go build -v ./...
 
-generate_all_targets_on_linux_amd64: linux_amd64 linux_386 linux_arm_on_linux_amd64 linux_arm64 linux_s390x windows_amd64 #TODO windows_386
+generate_all_targets_on_linux_amd64: linux_amd64 linux_386 linux_arm linux_arm64 linux_s390x windows_amd64 #TODO windows_386
 	gofmt -l -s -w .
 	echo done
 
